@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Mediator", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Mediator.SendOperations", "DesignPatterns.Mediator.SendOperations\DesignPatterns.Mediator.SendOperations.csproj", "{AE6DD38F-80DC-49DD-8133-07C2801547C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.MediatRDemo", "DesignPatterns.MediatRDemo\DesignPatterns.MediatRDemo.csproj", "{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.MediatRDemo", "DesignPatterns.MediatRDemo\DesignPatterns.MediatRDemo.csproj", "{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.CQRSDemo", "DesignPatterns.CQRSDemo\DesignPatterns.CQRSDemo.csproj", "{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.MediatRBehaviorsDemo", "DesignPatterns.MediatRBehaviorsDemo\DesignPatterns.MediatRBehaviorsDemo.csproj", "{1DD24045-7503-4C00-B913-0F01DAF4E059}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
