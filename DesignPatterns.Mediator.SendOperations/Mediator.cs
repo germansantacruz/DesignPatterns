@@ -48,7 +48,7 @@ namespace DesignPatterns.Mediator.SendOperations
             }
 
             Type handler = _handlersAssembly.GetTypes()
-                .Where(t => t.GetInterfaces()
+                .Where(t => t.GetInterfaces()    // Cambiar directamente por FirstOrDefault
                 .Where(i => i.IsGenericType &&  // Cambiar directamente por Any
                             i.GetGenericTypeDefinition() == RequestHandlerType &&
                             i.GetGenericArguments()[0] == request.GetType() &&

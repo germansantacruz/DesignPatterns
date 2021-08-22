@@ -44,6 +44,9 @@ namespace DesignPatterns.CQRSDemo.Controllers
             }
 
             return result;
+
+            // await _mediator.Send(command);
+            // return Ok($"Producto {command.Id} ha sido modificado.");
         }
 
         [HttpGet]

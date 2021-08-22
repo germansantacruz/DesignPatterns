@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Notifications", "DesignPatterns.Notifications\DesignPatterns.Notifications.csproj", "{ABC4066E-0A29-4742-B078-19C22E45FEBD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Mediator", "DesignPatterns.Mediator\DesignPatterns.Mediator.csproj", "{F2107532-4F7A-4E4B-A664-8667E7ED25F5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Mediator.SendOperations", "DesignPatterns.Mediator.SendOperations\DesignPatterns.Mediator.SendOperations.csproj", "{AE6DD38F-80DC-49DD-8133-07C2801547C0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.MediatRDemo", "DesignPatterns.MediatRDemo\DesignPatterns.MediatRDemo.csproj", "{E1E50C81-4C40-45B9-B473-7FE26FA7B9FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.CQRSDemo", "DesignPatterns.CQRSDemo\DesignPatterns.CQRSDemo.csproj", "{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.CQRSDemo", "DesignPatterns.CQRSDemo\DesignPatterns.CQRSDemo.csproj", "{BE4BDD89-C125-480D-84B9-76BE6EA8DCB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.MediatRBehaviorsDemo", "DesignPatterns.MediatRBehaviorsDemo\DesignPatterns.MediatRBehaviorsDemo.csproj", "{1DD24045-7503-4C00-B913-0F01DAF4E059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.MediatRBehaviorsDemo", "DesignPatterns.MediatRBehaviorsDemo\DesignPatterns.MediatRBehaviorsDemo.csproj", "{1DD24045-7503-4C00-B913-0F01DAF4E059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Mediator.Demo.CommandsAndHandlers", "DesignPatterns.Mediator.Demo.CommandsAndHandlers\DesignPatterns.Mediator.Demo.CommandsAndHandlers.csproj", "{E41A3A50-CD11-4441-9B0E-CD7258819392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Mediator.Client", "DesignPatterns.Mediator.Client\DesignPatterns.Mediator.Client.csproj", "{68A13349-EFB6-4B4F-98C8-D265F7258D4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Mediator.Notifications", "DesignPatterns.Mediator.Notifications\DesignPatterns.Mediator.Notifications.csproj", "{77FC180A-79E8-4DF9-B7DA-105347D958E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ABC4066E-0A29-4742-B078-19C22E45FEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABC4066E-0A29-4742-B078-19C22E45FEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABC4066E-0A29-4742-B078-19C22E45FEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABC4066E-0A29-4742-B078-19C22E45FEBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2107532-4F7A-4E4B-A664-8667E7ED25F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2107532-4F7A-4E4B-A664-8667E7ED25F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2107532-4F7A-4E4B-A664-8667E7ED25F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2107532-4F7A-4E4B-A664-8667E7ED25F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE6DD38F-80DC-49DD-8133-07C2801547C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE6DD38F-80DC-49DD-8133-07C2801547C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6DD38F-80DC-49DD-8133-07C2801547C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +39,18 @@ Global
 		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD24045-7503-4C00-B913-0F01DAF4E059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41A3A50-CD11-4441-9B0E-CD7258819392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41A3A50-CD11-4441-9B0E-CD7258819392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41A3A50-CD11-4441-9B0E-CD7258819392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41A3A50-CD11-4441-9B0E-CD7258819392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A13349-EFB6-4B4F-98C8-D265F7258D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A13349-EFB6-4B4F-98C8-D265F7258D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A13349-EFB6-4B4F-98C8-D265F7258D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A13349-EFB6-4B4F-98C8-D265F7258D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FC180A-79E8-4DF9-B7DA-105347D958E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FC180A-79E8-4DF9-B7DA-105347D958E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FC180A-79E8-4DF9-B7DA-105347D958E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FC180A-79E8-4DF9-B7DA-105347D958E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

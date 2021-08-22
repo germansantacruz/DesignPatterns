@@ -29,6 +29,11 @@ namespace DesignPatterns.CQRSDemo.Application.Products.Handlers
                 
                 result = await _context.Update(product);
             }
+            /*
+             * else {
+             *      throw new EntityNotFoundException("Product", command.Id);
+             * }
+             */
 
             return result;
         }

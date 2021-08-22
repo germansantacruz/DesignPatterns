@@ -1,13 +1,11 @@
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 
-namespace DesignPatterns.MediatRDemo
+namespace DesignPatterns.Mediator.Notifications
 {
     public class Startup
     {
@@ -25,10 +23,17 @@ namespace DesignPatterns.MediatRDemo
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DesignPatterns.MediatRDemo", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DesignPatterns.Mediator.Notifications", Version = "v1" });
             });
 
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            // ASP.NET Core Los inyectará como IEnumerable<T> donde T es INotificationHandler
+            // NotificationHandler1, 2 y 3 tienen distintas responsabilidades solo que
+            // implementan la misma interfaz para que se les notique de algun evento
+            services.AddTransient<INotificationHandler, NotificationHandler1>();
+            services.AddTransient<INotificationHandler, NotificationHandler2>();
+            services.AddTransient<INotificationHandler, NotificationHandler3>();
+
+            services.AddTransient<IMediator, Mediator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +43,7 @@ namespace DesignPatterns.MediatRDemo
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DesignPatterns.MediatRDemo v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DesignPatterns.Mediator.Notifications v1"));
             }
 
             app.UseHttpsRedirection();

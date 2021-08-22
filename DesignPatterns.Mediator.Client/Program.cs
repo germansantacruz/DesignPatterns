@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace DesignPatterns.MediatRDemo
+namespace DesignPatterns.Mediator.Client
 {
     public class Program
     {
