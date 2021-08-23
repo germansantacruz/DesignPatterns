@@ -34,6 +34,7 @@ namespace DesignPatterns.CQRSDemo.Controllers
         [HttpPut]
         public async Task<IActionResult> Update(UpdateProductCommand command)
         {
+            /*
             IActionResult result = BadRequest("No se ha modificado el producto.");
 
             bool modified = await _mediator.Send(command);
@@ -43,10 +44,11 @@ namespace DesignPatterns.CQRSDemo.Controllers
                 result = Ok($"Producto {command.Id} ha sido modificado.");
             }
 
-            return result;
+            return result;*/
 
-            // await _mediator.Send(command);
-            // return Ok($"Producto {command.Id} ha sido modificado.");
+            // Con filtros 
+            await _mediator.Send(command);
+            return Ok($"Producto {command.Id} ha sido modificado.");
         }
 
         [HttpGet]

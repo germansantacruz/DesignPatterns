@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.CQRSDemo.Application.Products.Commands;
 using DesignPatterns.CQRSDemo.Context;
+using DesignPatterns.CQRSDemo.Domain.Exceptions;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,12 +29,13 @@ namespace DesignPatterns.CQRSDemo.Application.Products.Handlers
                 product.UnitPrice = command.UnitPrice;               
                 
                 result = await _context.Update(product);
-            }
-            /*
-             * else {
-             *      throw new EntityNotFoundException("Product", command.Id);
-             * }
-             */
+            }            
+            else 
+            {
+                //throw new EntityNotFoundException("Product", command.Id);
+                //throw new Exception("Imposible encontrar el producto.");
+                throw new GeneralException("Imposible encontrar el producto.");
+            }             
 
             return result;
         }

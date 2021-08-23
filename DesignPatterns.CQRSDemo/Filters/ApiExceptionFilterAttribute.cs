@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.CQRSDemo.Filters.Handlers;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,9 @@ namespace DesignPatterns.CQRSDemo.Filters
             else
             {
                 // Excepciones sin manejador
+                new ExceptionHandlerBase().SetResult(context,
+                    StatusCodes.Status500InternalServerError,
+                    "Ha ocurrido un error al procesar la respuesta.");
             }
 
             // Buscar el manejador de la excepcion
